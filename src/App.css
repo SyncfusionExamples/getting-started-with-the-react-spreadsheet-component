@@ -1,9 +1,5 @@
-.App {
-  padding: 10%;
-}
-
 @import url("https://cdn.syncfusion.com/ej2/bootstrap5.css");
 
-#actionBtn .e-btn{
+.App{
   margin: 2%;
 }

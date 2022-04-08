@@ -1,10 +1,10 @@
-# Getting Started with the React Signature Pad Component
+# Getting Started with the React Spreadsheet Component
 
-A quick-start project that shows how to create and configure the Syncfusion React Signature component. This project contains code snippet for changing the background color, stroke color, velocity, minimum and maximum stroke width, and apply a background image to the signature component. It also shows how to save the signature as an image and clear the signature in the pad.
+A quick-start project that shows how to create and configure the Syncfusion React Spreadsheet component. This project also contains code example to configure a few of the control’s basic features like data-binding, importing, and exporting Excel documents.
 
-Documentation: https://ej2.syncfusion.com/react/documentation/signature/getting-started/
+Documentation: https://ej2.syncfusion.com/react/documentation/spreadsheet/getting-started/
 
-Online examples: https://ej2.syncfusion.com/react/demos/#/bootstrap5/signature/defaultt
+Online examples: https://ej2.syncfusion.com/react/demos/#/bootstrap5/spreadsheet/default
 
 ## Project prerequisites
 

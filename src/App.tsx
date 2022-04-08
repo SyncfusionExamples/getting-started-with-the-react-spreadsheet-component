@@ -1,30 +1,23 @@
 import React from 'react';
 import './App.css';
-import {SignatureComponent, Signature} from '@syncfusion/ej2-react-inputs';
-import {ButtonComponent} from '@syncfusion/ej2-react-buttons';
+import {RangeDirective, RangesDirective, SheetDirective, SheetsDirective, 
+  SpreadsheetComponent} from '@syncfusion/ej2-react-spreadsheet';
+import {defaultData} from './data';
 function App() {
-  let signObj: Signature | null;
-  const OnSave=()=>{
-    signObj?.save();
-  }
-  const OnClear=()=>{
-    signObj?.clear();
-  }
   return (
     <div className="App">
-      <div id="actionBtn">
-        <ButtonComponent onClick={OnSave}>Save</ButtonComponent>
-        <ButtonComponent onClick={OnClear}>Clear</ButtonComponent>
-      </div>
-      <SignatureComponent ref={sign=> signObj = sign}
-        backgroundColor='red' 
-        strokeColor='white'
-        velocity={1}
-        disabled={true}
-        minStrokeWidth={2}
-        maxStrokeWidth={5}>
-        {/* backgroundImage="https://www.syncfusion.com/blogs/wp-content/uploads/2019/11/blog_1x.jpg" */}
-        </SignatureComponent>
+      <SpreadsheetComponent allowOpen={true}
+        openUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open"
+        allowSave={true}
+        saveUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save">
+        <SheetsDirective>
+          <SheetDirective>
+            <RangesDirective>
+              <RangeDirective dataSource={defaultData}></RangeDirective>
+            </RangesDirective>
+          </SheetDirective>
+        </SheetsDirective>
+      </SpreadsheetComponent>
     </div>
   );
 }

@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@syncfusion/ej2-react-buttons": "^20.1.47",
-    "@syncfusion/ej2-react-inputs": "^20.1.47",
+    "@syncfusion/ej2-react-spreadsheet": "^20.1.47",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
