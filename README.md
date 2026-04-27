@@ -1,15 +1,29 @@
 # Getting Started with the React Spreadsheet Component
 
-A quick-start project that shows how to create and configure the Syncfusion React Spreadsheet component. This project also contains code example to configure a few of the control’s basic features like data-binding, importing, and exporting Excel documents.
+A quick-start project that helps you create and configure the Syncfusion React Spreadsheet component. This project enables users to clone and run the app easily to explore Spreadsheet features.
 
-Documentation: https://ej2.syncfusion.com/react/documentation/spreadsheet/getting-started/
+## Documentation
 
-Online examples: https://ej2.syncfusion.com/react/demos/#/bootstrap5/spreadsheet/default
+- Getting Started Guide: https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started
+- Online Demo: https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default
+- Tutorial Videos: https://www.syncfusion.com/tutorial-videos/react/spreadsheet
 
-## Project prerequisites
+## Project Prerequisites
 
-Make sure that you have the latest versions of NodeJS and Visual Studio Code in your machine before starting to work on this project.
+- Node.js(v14.15.0 or higher)
+- npm or yarn
+- React (latest stable)
 
-### How to run this application?
+## How to run this application?
 
-To run this application, you need to clone the `getting-started-with-the-react-spreadsheet-component` repository and then open it in Visual Studio Code. Now, simply install all the necessary react packages into your current project using the `npm install` command and run your project using the `npm start` command.
+1. Clone the repository.
+2. Open the project in Visual Studio Code.
+3. Install the required dependencies using:
+   ```
+   npm install
+   ```
+4. Run the application using:
+   ```
+   npm start
+   ```
+5. Open http://localhost:3000 in your browser.
