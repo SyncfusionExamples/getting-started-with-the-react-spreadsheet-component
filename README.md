@@ -2,12 +2,6 @@
 
 A quick-start project that helps you create and configure the Syncfusion React Spreadsheet component. This project enables users to clone and run the app easily to explore Spreadsheet features.
 
-## Documentation
-
-- Getting Started Guide: https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started
-- Online Demo: https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default
-- Tutorial Videos: https://www.syncfusion.com/tutorial-videos/react/spreadsheet
-
 ## Project Prerequisites
 
 - Node.js(v14.15.0 or higher)
@@ -27,3 +21,9 @@ A quick-start project that helps you create and configure the Syncfusion React S
    npm start
    ```
 5. Open http://localhost:3000 in your browser.
+
+## Documentation
+
+- Getting Started Guide: https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started
+- Online Demo: https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/default
+- Tutorial Videos: https://www.syncfusion.com/tutorial-videos/react/spreadsheet
