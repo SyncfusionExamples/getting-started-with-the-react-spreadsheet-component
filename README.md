@@ -1,6 +1,6 @@
 # Getting Started with the React Spreadsheet Component
 
-A quick-start project that helps you create and configure the Syncfusion React Spreadsheet component. This project enables users to clone and run the app easily to explore Spreadsheet features.
+A quick-start project that helps you create and configure the [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component. This project enables users to clone and run the app easily to explore Spreadsheet features.
 
 ## Project Prerequisites
 
