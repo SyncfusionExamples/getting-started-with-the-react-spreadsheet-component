@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 export default function App() {
-  return (<SpreadsheetComponent/>);
+  return (<SpreadsheetComponent />);
 }
 const root = createRoot(document.getElementById('root'));
 root.render(<App />);
