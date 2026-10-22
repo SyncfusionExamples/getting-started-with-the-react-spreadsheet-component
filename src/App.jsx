@@ -1,32 +1,37 @@
 import * as React from 'react';
-import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 import './App.css';
 
-let spreadsheetRef = null;
-let spreadsheetContainer = null;
+let spreadsheetInstance = null;
 
 async function createSpreadsheet() {
   const response = await fetch('/spreadsheetData.json');
   const data = await response.json();
   
   spreadsheetContainer.innerHTML = '<div id="spreadsheet"></div>';
+  const { createRoot } = await import('react-dom/client');
   const root = createRoot(document.getElementById('spreadsheet'));
+  
   root.render(
     <SpreadsheetComponent 
-      ref={(ref) => { spreadsheetRef = ref; }}
-      allowOpen={true}
-      openFromJson={{ file: data }}
+      ref={(ref) => { spreadsheetInstance = ref; }}
+      created={() => {
+        if (spreadsheetInstance) {
+          spreadsheetInstance.openFromJson({ file: data });
+        }
+      }}
     />
   );
 }
 
 function destroySpreadsheet() {
-  if (spreadsheetRef) {
-    spreadsheetRef.destroy();
+  if (spreadsheetInstance) {
+    spreadsheetInstance.destroy();
   }
   spreadsheetContainer.innerHTML = '';
 }
+
+let spreadsheetContainer = null;
 
 export default function App() {
   return (

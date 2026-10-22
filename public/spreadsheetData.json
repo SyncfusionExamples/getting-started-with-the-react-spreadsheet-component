@@ -1,0 +1,69 @@
+{
+    "jsonObject": {
+        "Workbook": {
+            "enableRtl": false,
+            "locale": "en-US",
+            "openUrl": "https://services.syncfusion.com/angular/production/api/spreadsheet/open",
+            "saveUrl": "https://services.syncfusion.com/angular/production/api/spreadsheet/save",
+            "enablePersistence": false,
+            "cellStyle": {},
+            "showRibbon": true,
+            "showFormulaBar": true,
+            "showSheetTabs": true,
+            "allowEditing": true,
+            "allowOpen": true,
+            "allowSave": true,
+            "enableContextMenu": true,
+            "allowAutoFill": true,
+            "selectionSettings": {
+                "mode": "Multiple"
+            },
+            "enableKeyboardNavigation": true,
+            "allowNumberFormatting": true,
+            "enableKeyboardShortcut": true,
+            "enableClipboard": true,
+            "allowCellFormatting": true,
+            "allowSorting": true,
+            "allowResizing": true,
+            "allowHyperlink": true,
+            "enableNotes": true,
+            "allowUndoRedo": true,
+            "allowFiltering": true,
+            "allowWrap": true,
+            "allowInsert": true,
+            "allowDelete": true,
+            "allowDataValidation": true,
+            "allowFindAndReplace": true,
+            "allowMerge": true,
+            "allowConditionalFormat": true,
+            "allowImage": true,
+            "allowChart": true,
+            "allowFormControl": true,
+            "enableAIAssist": false,
+            "enableWebMcp": false,
+            "enableCollaborativeEditing": false,
+            "allowPrint": true,
+            "activeSheetIndex": 0,
+            "listSeparator": ",",
+            "cssClass": "",
+            "height": "100%",
+            "width": "100%",
+            "allowScrolling": true,
+            "scrollSettings": {
+                "enableVirtualization": true,
+                "isFinite": false
+            },
+            "calculationMode": "Automatic",
+            "allowFreezePane": true,
+            "definedNames": [],
+            "isProtected": false,
+            "password": "",
+            "showCommentsPane": false,
+            "autoFillSettings": {
+                "showFillOptions": true
+            },
+            "showAggregate": true,
+            "filterCollection": []
+        }
+    }
+}
