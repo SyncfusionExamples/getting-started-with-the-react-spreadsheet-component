@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 import { SpreadsheetWrapper } from './SpreadsheetWrapper';
 
 /**
@@ -197,7 +198,6 @@ export function JsonDataDemo() {
  */
 const SpreadsheetJsonWrapper = React.forwardRef(
   ({ jsonData, onCreated, onDestroyed, height = '100%', width = '100%', ...props }, ref) => {
-    const { SpreadsheetComponent } = require('@syncfusion/ej2-react-spreadsheet');
     const spreadsheetRef = React.useRef(null);
     const isDestroyingRef = React.useRef(false);
 
