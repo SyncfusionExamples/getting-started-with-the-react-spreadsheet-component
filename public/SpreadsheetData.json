@@ -1,0 +1,300 @@
+{
+  "jsonObject": {
+    "Workbook": {
+      "enableRtl": false,
+      "locale": "en-US",
+      "openUrl": "https://services.syncfusion.com/js/production/api/spreadsheet/open",
+      "saveUrl": "https://services.syncfusion.com/js/production/api/spreadsheet/save",
+      "enablePersistence": false,
+      "cellStyle": {},
+      "showRibbon": true,
+      "showFormulaBar": true,
+      "showSheetTabs": true,
+      "allowEditing": true,
+      "sheets": [
+        {
+          "name": "Sample Data",
+          "index": 0,
+          "isProtected": false,
+          "protectSheet": {
+            "algorithmName": "SHA-1",
+            "hashValue": "",
+            "saltValue": "",
+            "spinCount": 0
+          },
+          "rows": [
+            {
+              "index": 0,
+              "height": 30,
+              "isFiltered": false,
+              "cells": [
+                {
+                  "index": 0,
+                  "value": "Product",
+                  "style": {
+                    "bold": true,
+                    "fontSize": 11,
+                    "fontName": "Calibri",
+                    "borders": {
+                      "left": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "right": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "top": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "bottom": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      }
+                    }
+                  }
+                },
+                {
+                  "index": 1,
+                  "value": "Quantity",
+                  "style": {
+                    "bold": true,
+                    "fontSize": 11,
+                    "fontName": "Calibri",
+                    "borders": {
+                      "left": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "right": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "top": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "bottom": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      }
+                    }
+                  }
+                },
+                {
+                  "index": 2,
+                  "value": "Price",
+                  "style": {
+                    "bold": true,
+                    "fontSize": 11,
+                    "fontName": "Calibri",
+                    "borders": {
+                      "left": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "right": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "top": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "bottom": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      }
+                    }
+                  }
+                },
+                {
+                  "index": 3,
+                  "value": "Total",
+                  "style": {
+                    "bold": true,
+                    "fontSize": 11,
+                    "fontName": "Calibri",
+                    "borders": {
+                      "left": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "right": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "top": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      },
+                      "bottom": {
+                        "lineStyle": "Thin",
+                        "color": "000000"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "height": 20,
+              "cells": [
+                {
+                  "index": 0,
+                  "value": "Apple"
+                },
+                {
+                  "index": 1,
+                  "value": 100
+                },
+                {
+                  "index": 2,
+                  "value": 50
+                },
+                {
+                  "index": 3,
+                  "value": "=B2*C2",
+                  "formula": "=B2*C2"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "height": 20,
+              "cells": [
+                {
+                  "index": 0,
+                  "value": "Banana"
+                },
+                {
+                  "index": 1,
+                  "value": 150
+                },
+                {
+                  "index": 2,
+                  "value": 30
+                },
+                {
+                  "index": 3,
+                  "value": "=B3*C3",
+                  "formula": "=B3*C3"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "height": 20,
+              "cells": [
+                {
+                  "index": 0,
+                  "value": "Orange"
+                },
+                {
+                  "index": 1,
+                  "value": 200
+                },
+                {
+                  "index": 2,
+                  "value": 40
+                },
+                {
+                  "index": 3,
+                  "value": "=B4*C4",
+                  "formula": "=B4*C4"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "height": 20,
+              "cells": [
+                {
+                  "index": 0,
+                  "value": "Mango"
+                },
+                {
+                  "index": 1,
+                  "value": 120
+                },
+                {
+                  "index": 2,
+                  "value": 60
+                },
+                {
+                  "index": 3,
+                  "value": "=B5*C5",
+                  "formula": "=B5*C5"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "height": 20,
+              "cells": [
+                {
+                  "index": 0,
+                  "value": "Grapes"
+                },
+                {
+                  "index": 1,
+                  "value": 180
+                },
+                {
+                  "index": 2,
+                  "value": 45
+                },
+                {
+                  "index": 3,
+                  "value": "=B6*C6",
+                  "formula": "=B6*C6"
+                }
+              ]
+            },
+            {
+              "index": 6,
+              "height": 25,
+              "cells": [
+                {
+                  "index": 0,
+                  "value": "Total Sales",
+                  "style": {
+                    "bold": true
+                  }
+                },
+                {
+                  "index": 3,
+                  "value": "=SUM(D2:D6)",
+                  "formula": "=SUM(D2:D6)",
+                  "style": {
+                    "bold": true
+                  }
+                }
+              ]
+            }
+          ],
+          "columns": [
+            {
+              "index": 0,
+              "width": 100
+            },
+            {
+              "index": 1,
+              "width": 100
+            },
+            {
+              "index": 2,
+              "width": 100
+            },
+            {
+              "index": 3,
+              "width": 100
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
