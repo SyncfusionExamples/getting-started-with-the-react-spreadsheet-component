@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+import SpreadsheetDemo from './SpreadsheetDemo';
+import './App.css';
 
 export default function App() {
-  return (<SpreadsheetComponent/>);
+  return <SpreadsheetDemo />;
 }
+
 const root = createRoot(document.getElementById('root'));
 root.render(<App />);
