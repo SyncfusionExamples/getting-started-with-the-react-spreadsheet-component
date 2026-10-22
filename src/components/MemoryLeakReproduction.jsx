@@ -259,7 +259,7 @@ export function MemoryLeakReproduction() {
         )}
       </div>
 
-      {isSpreadsheetOpen && workbookData && (
+      {isSpreadsheetOpen && (
         <div
           style={{
             marginTop: '20px',
@@ -273,9 +273,11 @@ export function MemoryLeakReproduction() {
             <SpreadsheetWrapper
               ref={spreadsheetRef}
               openUrl="https://cdn.syncfusion.com/ej2/sample-data/spreadsheet/sample.xlsx"
-              saveUrl="https://services.syncfusion.com/js/production/api/spreadsheet/save"
               height="100%"
               width="100%"
+              onDestroyed={() => {
+                console.log('Spreadsheet destroyed, memory should be released');
+              }}
             />
           </div>
         </div>
