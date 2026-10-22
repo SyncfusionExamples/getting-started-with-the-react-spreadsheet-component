@@ -3,64 +3,45 @@ import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 import './App.css';
 
-function SpreadsheetDemo() {
-  const [spreadsheetData, setSpreadsheetData] = React.useState(null);
-  const [isOpen, setIsOpen] = React.useState(false);
-  const spreadsheetRef = React.useRef(null);
+let spreadsheetRef = null;
+let spreadsheetContainer = null;
 
-  const handleOpenSpreadsheet = async () => {
-    try {
-      const response = await fetch('/spreadsheetData.json');
-      const data = await response.json();
-      setSpreadsheetData(data);
-      setIsOpen(true);
-    } catch (error) {
-      console.error('Error loading spreadsheet data:', error);
-    }
-  };
-
-  const handleCloseSpreadsheet = () => {
-    if (spreadsheetRef.current) {
-      spreadsheetRef.current.destroy();
-    }
-    setIsOpen(false);
-    setSpreadsheetData(null);
-  };
-
-  return (
-    <div className="app-container">
-      <div className="controls">
-        <button 
-          onClick={handleOpenSpreadsheet}
-          disabled={isOpen}
-          className="btn btn-primary"
-        >
-          Create Spreadsheet
-        </button>
-        <button 
-          onClick={handleCloseSpreadsheet}
-          disabled={!isOpen}
-          className="btn btn-danger"
-        >
-          Destroy Spreadsheet
-        </button>
-      </div>
-
-      {isOpen && (
-        <div className="spreadsheet-wrapper">
-          <SpreadsheetComponent 
-            ref={spreadsheetRef}
-            allowOpen={true}
-            openFromJson={{ file: spreadsheetData }}
-          />
-        </div>
-      )}
-    </div>
+async function createSpreadsheet() {
+  const response = await fetch('/spreadsheetData.json');
+  const data = await response.json();
+  
+  spreadsheetContainer.innerHTML = '<div id="spreadsheet"></div>';
+  const root = createRoot(document.getElementById('spreadsheet'));
+  root.render(
+    <SpreadsheetComponent 
+      ref={(ref) => { spreadsheetRef = ref; }}
+      allowOpen={true}
+      openFromJson={{ file: data }}
+    />
   );
 }
 
-export default function App() {
-  return <SpreadsheetDemo />;
+function destroySpreadsheet() {
+  if (spreadsheetRef) {
+    spreadsheetRef.destroy();
+  }
+  spreadsheetContainer.innerHTML = '';
+}
+
+function App() {
+  return (
+    <div className="app-container">
+      <div className="controls">
+        <button onClick={createSpreadsheet} className="btn btn-primary">
+          Create Spreadsheet
+        </button>
+        <button onClick={destroySpreadsheet} className="btn btn-danger">
+          Destroy Spreadsheet
+        </button>
+      </div>
+      <div className="spreadsheet-wrapper" ref={(ref) => { spreadsheetContainer = ref; }}></div>
+    </div>
+  );
 }
 
 const root = createRoot(document.getElementById('root'));
