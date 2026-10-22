@@ -7,6 +7,7 @@ function SpreadsheetDemo() {
   const [spreadsheetData, setSpreadsheetData] = React.useState(null);
   const [isOpen, setIsOpen] = React.useState(false);
   const [cycleCount, setCycleCount] = React.useState(0);
+  const [isControlsCollapsed, setIsControlsCollapsed] = React.useState(false);
   const spreadsheetRef = React.useRef(null);
 
   const handleOpenSpreadsheet = async () => {
@@ -45,47 +46,71 @@ function SpreadsheetDemo() {
 
   return (
     <div className="app-container">
-      <div className="controls">
-        <h1>Spreadsheet Memory Leak Test</h1>
-        <div className="button-group">
+      <div className={`controls ${isControlsCollapsed ? 'collapsed' : ''}`}>
+        <h1>
+          Spreadsheet Memory Leak Test
           <button 
-            onClick={handleOpenSpreadsheet}
-            disabled={isOpen}
-            className="btn btn-primary"
+            className="toggle-btn"
+            onClick={() => setIsControlsCollapsed(!isControlsCollapsed)}
+            title={isControlsCollapsed ? 'Expand' : 'Collapse'}
           >
-            Open Spreadsheet (Load Data)
+            {isControlsCollapsed ? '▼' : '▲'}
           </button>
-          {isOpen && spreadsheetData && (
-            <button 
-              onClick={handleOpenFromJson}
-              className="btn btn-secondary"
-            >
-              Load Workbook with openFromJson
-            </button>
-          )}
-          <button 
-            onClick={handleCloseSpreadsheet}
-            disabled={!isOpen}
-            className="btn btn-danger"
-          >
-            Close & Destroy Spreadsheet
-          </button>
-        </div>
-        <div className="info">
-          <p><strong>Cycle Count:</strong> {cycleCount}</p>
-          <p><strong>Status:</strong> {isOpen ? '🟢 Open' : '🔴 Closed'}</p>
-          <p className="instructions">
-            Steps to check memory leak:
-          </p>
-          <ol>
-            <li>Click "Open Spreadsheet" to load data</li>
-            <li>Click "Load Workbook with openFromJson" to open the large workbook</li>
-            <li>Click "Close & Destroy Spreadsheet" to destroy the component</li>
-            <li>Open Chrome DevTools → Memory → Take heap snapshot</li>
-            <li>Click "Collect garbage" button</li>
-            <li>Repeat steps 1-5 several times and check if memory grows indefinitely</li>
-          </ol>
-        </div>
+        </h1>
+        
+        {!isControlsCollapsed && (
+          <>
+            <div className="status-info">
+              <div className="status-item">
+                <strong>Cycle Count:</strong>
+                <span className="status-badge">{cycleCount}</span>
+              </div>
+              <div className="status-item">
+                <strong>Status:</strong>
+                <span className={`status-badge ${isOpen ? 'open' : 'closed'}`}>
+                  {isOpen ? '🟢 Open' : '🔴 Closed'}
+                </span>
+              </div>
+            </div>
+
+            <div className="button-group">
+              <button 
+                onClick={handleOpenSpreadsheet}
+                disabled={isOpen}
+                className="btn btn-primary"
+              >
+                Open Spreadsheet
+              </button>
+              {isOpen && spreadsheetData && (
+                <button 
+                  onClick={handleOpenFromJson}
+                  className="btn btn-secondary"
+                >
+                  Load Workbook (openFromJson)
+                </button>
+              )}
+              <button 
+                onClick={handleCloseSpreadsheet}
+                disabled={!isOpen}
+                className="btn btn-danger"
+              >
+                Close & Destroy
+              </button>
+            </div>
+
+            <div className="info">
+              <p className="instructions">Steps to check memory leak:</p>
+              <ol>
+                <li>Click "Open Spreadsheet" to load data</li>
+                <li>Click "Load Workbook (openFromJson)" to open the workbook</li>
+                <li>Click "Close & Destroy" to destroy the component</li>
+                <li>Open Chrome DevTools → Memory → Take heap snapshot</li>
+                <li>Click "Collect garbage" button</li>
+                <li>Repeat steps 1-5 and check if memory grows indefinitely</li>
+              </ol>
+            </div>
+          </>
+        )}
       </div>
 
       {isOpen && (
