@@ -28,7 +28,7 @@ function destroySpreadsheet() {
   spreadsheetContainer.innerHTML = '';
 }
 
-function App() {
+export default function App() {
   return (
     <div className="app-container">
       <div className="controls">
@@ -43,6 +43,3 @@ function App() {
     </div>
   );
 }
-
-const root = createRoot(document.getElementById('root'));
-root.render(<App />);
